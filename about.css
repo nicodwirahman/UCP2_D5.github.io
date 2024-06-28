@@ -1,0 +1,283 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: rgb(143, 24, 24);
+}
+
+.header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.header nav {
+    flex: 1; /* Membuat nav mengambil sisa ruang di header */
+    display: flex;
+    justify-content: center; /* Memusatkan tautan horizontal */
+    align-items: center;
+}
+
+.header nav ul {
+    list-style: none;
+    display: inline-flex; /* Membuat daftar tautan berjajar secara horizontal */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    margin: 0;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.header nav ul li {
+    display: inline-block;
+    margin: 0 10px; /* Spasi antara setiap tautan */
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px; /* Ukuran padding untuk area klik */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang saat hover */
+}
+
+
+.hero {
+    background-image: url('your-background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:gray;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero img {
+    width: 100px;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.text-block {
+    max-width: 800px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.icon-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.icon-block {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.icon-block i {
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Atur lebar sesuai kebutuhan */
+    height: 300px; /* Atur tinggi sesuai kebutuhan */
+ 
+    border-radius: 5px;
+    overflow: hidden; /* Memastikan gambar tidak meluap keluar kotak */
+}
+
+.image-box img {
+    width: 20%; /* Ukuran gambar */
+    height: auto;
+    border-radius: 5px; /* Sudut bulat */
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #FF0000;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-description {
+    text-align: center;
+    margin: 20px 0;
+    color: #ccc;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .grid-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .text-block {
+        flex: 100%;
+        margin-top: 20px;
+    }
+
+    .image-box img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-item {
+        flex: 100%;
+    }
+}
